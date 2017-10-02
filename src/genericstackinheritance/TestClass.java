@@ -1,5 +1,5 @@
 package genericstackinheritance;
-
+import java.util.ArrayList;
 /**
  *
  * @author lennardneuwirth
@@ -36,6 +36,17 @@ public class TestClass {
             System.out.println(s);
         }
         
+    }
+    
+    //Takes in an ArrayList and returns a non-duplicate list back.
+    public static <E> ArrayList<E> removeDuplicates(ArrayList<E> list){
+        ArrayList<E> nonDupList = new ArrayList<>();
+        for(E item : list){
+            if(!(nonDupList.contains(item))){
+                nonDupList.add(item);
+            }
+        }
+        return nonDupList;
     }
     
 }
